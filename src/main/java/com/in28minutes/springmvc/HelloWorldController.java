@@ -1,6 +1,9 @@
 package com.in28minutes.springmvc;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //step 1 annottate as controller who is child of component
@@ -19,4 +22,18 @@ public class HelloWorldController {
 	public String ProcessorForm() {
 		return "Hellow-world-form";
 	}
+	
+@RequestMapping("/processorForm2")	
+public String withModel(HttpServletRequest request,Model model) {
+	
+	//get form element here name
+	
+	String nameString=request.getParameter("name").toUpperCase();
+	
+	model.addAttribute("message",nameString);
+	
+	
+		return "modelhelloworld";
+	}
+
 }

@@ -17,7 +17,7 @@ background-color:cyan;
 <body>
 	<h2>Fill the details</h2>
 
-	<form action="processorForm" method="GET">
+	<form action="processorForm2" method="GET">
 		Name:<input type="text" name="name" placeholder="Enter your name"><br> <input type="submit"
 			value="submit">
 
