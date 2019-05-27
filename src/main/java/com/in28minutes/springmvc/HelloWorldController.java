@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 //step 1 annottate as controller who is child of component
 
@@ -35,5 +36,13 @@ public String withModel(HttpServletRequest request,Model model) {
 	
 		return "modelhelloworld";
 	}
+
+@RequestMapping("/processorForm3")
+public String usingRequestParam(@RequestParam("name") String name,Model model ) {
+	
+	model.addAttribute("message",name.toUpperCase());
+	
+	return "modelhelloworld";
+}
 
 }
