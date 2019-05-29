@@ -7,17 +7,13 @@
 <title>Insert title here</title>
 <style>
 body{
-background-color:yellow;
+background-color:grey;
 }
 </style>
 </head>
 <body>
-<h1>It's more than I thought</h1>
+<h2>First name is ${student.fname} and Last name is ${student.lname}</h2>
 
-<h3>Welcome to Home Page</h3>
-
-<a href="showForm">Hello Form</a>
-
-<a href="formtag">TagForm</a>
+<h3>Selected country: ${student.country} </h3>>
 </body>
 </html>
